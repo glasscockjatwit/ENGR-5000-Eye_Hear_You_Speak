@@ -128,9 +128,10 @@ public class Speech_Processing{
 		for(int i = 0; i < windows.length; i++) {
 			windows[i] = 0;
 		}
-		//Continue the rest of this later
+		//Check to see if there is anough audio for a single window.
+		//If not, pad the end with zeroes
 		if(audioStream.getFrameLength() < windowSize) {
-			//TODO: debug the audio length
+			
 		}
 		
 		
@@ -182,6 +183,8 @@ public class Speech_Processing{
 		//Testing the creation of the AudioInput Stream
 		Speech_Processing test =  new Speech_Processing(audioFile);
 		System.out.println("");
+		
+		
 	}
 }
 //d vector is a struct, [128, n]
